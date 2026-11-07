@@ -239,6 +239,6 @@ app.get('/login', (req,res)=>{ res.sendFile(__dirname + '/login.html'); });
 
 
 if (require.main === module) {
-  app.listen(PORT, () => console.log('Running on', PORT));
+  app.listen(PORT, '0.0.0.0', () => console.log('Running on ' + PORT))
 }
 module.exports = app;
